@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Enable Amazon DevOps Guru
+
+Parameters:
+  CfnStackNames:
+    Type: CommaDelimitedList
+    Description: Comma separated names of the CloudFormation Stacks for DevOps Guru to analyze.
+    Default: "*"
+
+  SnsTopicName:
+    Type: String
+    Description: Name of SNS Topic
+
+Resources:
+  DevOpsGuruMonitoring:
+    Type: AWS::DevOpsGuru::ResourceCollection
+    Properties:
+      ResourceCollection:
+        CloudFormation:
+          StackNames: !Ref CfnStackNames
+
+  DevOpsGuruNotification:
+    Type: AWS::DevOpsGuru::NotificationChannel
+    Properties:
+      Config:
+        Sns:
+          TopicArn: !Sub arn:aws:sns:${AWS::Region}:${AWS::AccountId}:${SnsTopicName}
+

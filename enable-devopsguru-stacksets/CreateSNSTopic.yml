@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Create Amazon SNS Topic for Devops Guru
+
+Parameters:
+  EmailAddress:
+    Description: Email address for SNS subscription.
+    Type: String
+
+Resources:
+  DevOpsGuruTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: SNS Topic for DevOps Guru
+      TopicName: devops-guru
+      Subscription:
+        - Endpoint: !Ref EmailAddress
+          Protocol: email
