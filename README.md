@@ -10,7 +10,7 @@ To get started, you need to configure DevOps Guru and specify which AWS resource
 
 Check out this blog post with detailed instructions: 
 
-[How to Easily Configure Amazon DevOps Guru to Monitor Your Resources Across AWS Accounts and Regions Using AWS CloudFormation StackSets](https://aws.amazon.com/blogs/devops)
+[Easily configure Amazon DevOps Guru across multiple accounts and regions using AWS CloudFormation StackStets](https://aws.amazon.com/blogs/devops)
 
 ![multi-account](./images/multi-account.png)
 
