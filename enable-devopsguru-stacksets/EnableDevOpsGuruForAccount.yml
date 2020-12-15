@@ -15,7 +15,7 @@ Resources:
   DevOpsGuruMonitoring:
     Type: AWS::DevOpsGuru::ResourceCollection
     Properties:
-      ResourceCollection:
+      ResourceCollectionFilter:
         CloudFormation:
           StackNames: !Ref CfnStackNames
 
