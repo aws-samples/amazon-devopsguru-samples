@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Enable Amazon DevOps Guru
+
+Parameters:
+  CfnStackNames:
+    Type: CommaDelimitedList
+    Description: Comma separated names of the CloudFormation Stacks for DevOps Guru to analyze.
+    Default: "*"
+
+Resources:
+  DevOpsGuruMonitoring:
+    Type: AWS::DevOpsGuru::ResourceCollection
+    Properties:
+      ResourceCollectionFilter:
+        CloudFormation:
+          StackNames: !Ref CfnStackNames

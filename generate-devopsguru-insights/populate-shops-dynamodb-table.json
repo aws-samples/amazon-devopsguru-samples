@@ -1,0 +1,47 @@
+{
+    "<YOUR-DYNAMODB-TABLE-NAME>": [
+        {
+            "PutRequest": {
+                "Item": {
+                  "name": {
+                        "S": "a-light-shop"
+                    },
+                  "specialty": {
+                        "S": "light-shop"
+                    },
+                  "address": {
+                        "S": "3333 random drive, random city"
+                    },
+                  "url": {
+                        "S": "www.random-light-shop.com"
+                    },
+                  "description": {
+                        "S": "This is my favorite light shop"
+                    }
+                }
+            }
+
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                  "name": {
+                        "S": "a-sports-shop"
+                    },
+                  "specialty": {
+                        "S": "sports-shop"
+                    },
+                  "address": {
+                        "S": "4444 random drive, random city"
+                    },
+                  "url": {
+                        "S": "www.random-sports-shop.com"
+                    },
+                  "description": {
+                        "S": "This is my favorite sports shop"
+                    }
+                }
+            }
+        }
+    ]
+}
