@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Generating DevOps Guru Insights for Lambda Function
+
+Resources:
+  rLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: DevOpsGuruSample-AnomalousLambda
+      MemorySize: 128
+      Timeout: 180
+      CodeUri: './lambda-code.py'
+      Handler: lambda-code.lambda_handler
+      Runtime: python3.8
+      # AutoPublishAlias: dev
+      # ProvisionedConcurrencyConfig: 
+      #   ProvisionedConcurrentExecutions: 3
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        EventBridgeRuleEvent:
+          Type: Schedule
+          Properties:
+            Schedule: rate(1 minute)
