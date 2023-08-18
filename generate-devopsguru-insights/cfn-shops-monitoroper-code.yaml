@@ -85,7 +85,7 @@ Resources:
         Fn::GetAtt:
           - LambdaServiceRoleMonitorOper
           - Arn
-      Runtime: nodejs12.x
+      Runtime: nodejs16.x
       Environment:
         Variables:
           TABLE_NAME:
@@ -187,7 +187,7 @@ Resources:
         Fn::GetAtt:
           - Lambda2ServiceRoleMonitorOper
           - Arn
-      Runtime: nodejs12.x
+      Runtime: nodejs16.x
       Environment:
         Variables:
           TABLE_NAME:
