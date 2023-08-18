@@ -12,7 +12,7 @@ Resources:
         - AttributeName: name
           AttributeType: S
       ProvisionedThroughput:
-        ReadCapacityUnits: 5
+        ReadCapacityUnits: 1
         WriteCapacityUnits: 5
     UpdateReplacePolicy: Retain
     DeletionPolicy: Retain
@@ -85,7 +85,7 @@ Resources:
         Fn::GetAtt:
           - LambdaServiceRoleMonitorOper
           - Arn
-      Runtime: nodejs12.x
+      Runtime: nodejs14.x
       Environment:
         Variables:
           TABLE_NAME:
@@ -187,7 +187,7 @@ Resources:
         Fn::GetAtt:
           - Lambda2ServiceRoleMonitorOper
           - Arn
-      Runtime: nodejs12.x
+      Runtime: nodejs14.x
       Environment:
         Variables:
           TABLE_NAME:

@@ -1,5 +1,5 @@
 {
-    "<YOUR-DYNAMODB-TABLE-NAME>": [
+    "myServerless-Stack-ShopsTableMonitorOper-18S73NBHIBZBQ": [
         {
             "PutRequest": {
                 "Item": {

@@ -3,7 +3,7 @@
 
 import requests
 
-url = 'https://<API-ID>.execute-api.<REGION>.amazonaws.com/prod/'
+url = 'https://awyewo5ib8.execute-api.ap-south-1.amazonaws.com/prod/'
 
 def main():
 
